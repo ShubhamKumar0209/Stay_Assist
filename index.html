@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay Assist</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#login">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h1>Welcome to Stay Assist</h1>
+        <p>Your one-stop solution for college service requests.</p>
+    </section>
+    
+    <section id="login">
+        <h2>Login / Register</h2>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+    
+    <section id="services">
+        <h2>Request a Service</h2>
+        <form id="serviceForm">
+            <label>Service Type:</label>
+            <select id="serviceType">
+                <option>Electric Repair</option>
+                <option>Furniture Repair</option>
+                <option>Laundry</option>
+                <option>Room Cleaning</option>
+                <option>Pest Control</option>
+            </select>
+            <input type="text" id="description" placeholder="Description">
+            <button type="submit">Submit Request</button>
+        </form>
+    </section>
+    
+    <section id="track">
+        <h2>Track Your Service</h2>
+        <p id="serviceStatus">No active service requests.</p>
+    </section>
+    
+    <section id="profile">
+        <h2>User Profile</h2>
+        <p>Edit your details and view service history.</p>
+    </section>
+    
+    <footer>
+        <p>Contact Us | Support</p>
+    </footer>
+</body>
+</html>
