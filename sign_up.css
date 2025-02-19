@@ -1,7 +1,10 @@
 /* General Styles */
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #000; /* Solid black background */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./project asssets/zoshua-colah-TzMGehZmocI-unsplash.jpg") center/cover
+      fixed;
+
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,9 +12,9 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    background-image: url('your-background-image.jpg'); /* Add your background image */
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     color: white; /* Global text color */
 }
 
@@ -21,17 +24,19 @@ body {
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Updated for proper spacing */
     align-items: center;
     background: rgba(255, 255, 255, 0.1); /* Transparent effect */
     backdrop-filter: blur(10px);
-    padding: 15px 30px;
+    padding: 15px;
     color: white;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Site Name - STAY in green, ASSIST in white */
 .site-name {
+    padding-left: 50px;
+    display: inline;
     font-size: 1.8rem;
     font-weight: bold;
 }
@@ -50,6 +55,7 @@ body {
     display: flex;
     gap: 20px;
     padding: 0;
+    margin:0;
 }
 
 .navbar ul li {
@@ -74,13 +80,16 @@ body {
     align-items: center;
     width: 85%;
     max-width: 1300px;
-    padding-top: 100px;
+    padding-top: 120px;
+    flex-wrap: wrap;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Logo Section */
 .logo-section {
     text-align: center;
     flex: 1;
+    min-width: 300px;
 }
 
 .logo-section img {
@@ -92,18 +101,33 @@ body {
     font-size: 2.5rem;
     color: #6FAF45;
 }
-
+h2{
+    font-size: 30px;
+    color: #4fb816;
+    text-shadow: 2px 2px 2px rgba(126, 152, 68, 0.541);
+}
 .tagline {
     font-size: 1.4rem;
     color: #bbb;
     font-weight: bold;
 }
-
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+  }
 /* Form Box - Blurry Glassmorphism Effect */
 .form-box {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    backdrop-filter: blur(15px);
-    padding: 50px;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    backdrop-filter: blur(12px);
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
     width: 450px;
@@ -111,6 +135,12 @@ body {
     margin-left: auto;
     border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border */
     color: white; /* Text color to contrast */
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), 
+                box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.form-box:hover {
+    transform: scale(1.05); /* Slightly enlarges the container */
+    box-shadow: 0px 8px 25px rgba(255, 255, 255, 0.3); /* Glowing effect */
 }
 
 /* Input Fields */
@@ -124,7 +154,7 @@ input, select {
     transition: border 0.3s;
     margin-bottom: 15px;
     background: rgba(255, 255, 255, 0.2); /* Light blur */
-    color: white;
+    color: rgb(154, 255, 12);
 }
 
 input:focus, select:focus {
@@ -134,7 +164,7 @@ input:focus, select:focus {
 
 /* Placeholder color for better readability */
 input::placeholder, select {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, 0.7);
 }
 
 /* Dropdown Styling */
@@ -142,14 +172,15 @@ select {
     appearance: none;
     background: rgba(255, 255, 255, 0.2);
     padding: 12px;
+    color: #050e00;
     cursor: pointer;
 }
 
 /* Register Button */
 button {
-    background-color: #6FAF45;
-    color: white;
-    border: none;
+    background: transparent;
+  border: #4fb816 solid;
+  color: white;
     padding: 12px 20px;
     border-radius: 10px;
     font-size: 1rem;
@@ -157,6 +188,7 @@ button {
     transition: background 0.3s;
     width: auto;
     min-width: 150px;
+    margin-right:30px;
 }
 
 button:hover {
@@ -164,7 +196,7 @@ button:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .container {
         flex-direction: column;
         text-align: center;
@@ -172,7 +204,7 @@ button:hover {
 
     .form-box {
         width: 90%;
-        padding: 40px;
+        padding: 30px;
         margin-left: 0;
     }
 
