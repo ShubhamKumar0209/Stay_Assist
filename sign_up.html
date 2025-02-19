@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay Assist - Register</title>
+    <link rel="stylesheet" href="sign_up.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="site-name">
+            <span class="stay">STAY</span><span class="assist">ASSIST</span>
+        </div>        
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <button class="sign-in">Sign In</button>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Logo & Tagline Section -->
+        <div class="logo-section">
+            <img src="logo.png" alt="Stay Assist Logo" onerror="this.style.display='none'">
+            <h1 class="fallback-logo">Stay Assist</h1>
+            <p class="tagline">One Tap, No Stress, Stay Assist for Hassle-less!</p>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form-box">
+            <h2>Register</h2>
+            <form action="#" method="POST">
+                <div class="name-group">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Phone Number" required>
+
+                <!-- Username Field -->
+                <div class="username-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <span id="username-status"></span>
+                </div>
+
+                <!-- Gender Selection -->
+                <div class="gender-group">
+                    <select id="gender" required>
+                        <option value="" disabled selected>Select Hostel</option>
+                        <option value="Men">Mens</option>
+                        <option value="Ladies">Ladies</option>
+                    </select>
+                </div>
+
+                <!-- Hostel and Room Selection -->
+                <div class="hostel-group">
+                    <select id="hostel" required>
+                        <option value="" disabled selected>Select Block</option>
+                    </select>
+                    <input type="text" placeholder="Room Number" required>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="sign_up.js"></script>
+</body>
+</html>

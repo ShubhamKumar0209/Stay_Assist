@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #000; /* Solid black background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url('your-background-image.jpg'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Global text color */
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1); /* Transparent effect */
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Site Name - STAY in green, ASSIST in white */
+.site-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.site-name .stay {
+    color: #6FAF45; /* Green color */
+}
+
+.site-name .assist {
+    color: white;
+}
+
+/* Navbar Links */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #6FAF45;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    max-width: 1300px;
+    padding-top: 100px;
+}
+
+/* Logo Section */
+.logo-section {
+    text-align: center;
+    flex: 1;
+}
+
+.logo-section img {
+    width: 220px;
+    height: auto;
+}
+
+.fallback-logo {
+    font-size: 2.5rem;
+    color: #6FAF45;
+}
+
+.tagline {
+    font-size: 1.4rem;
+    color: #bbb;
+    font-weight: bold;
+}
+
+/* Form Box - Blurry Glassmorphism Effect */
+.form-box {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+    width: 450px;
+    text-align: center;
+    margin-left: auto;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    color: white; /* Text color to contrast */
+}
+
+/* Input Fields */
+input, select {
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border 0.3s;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.2); /* Light blur */
+    color: white;
+}
+
+input:focus, select:focus {
+    border-color: #6FAF45;
+    outline: none;
+}
+
+/* Placeholder color for better readability */
+input::placeholder, select {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Dropdown Styling */
+select {
+    appearance: none;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    cursor: pointer;
+}
+
+/* Register Button */
+button {
+    background-color: #6FAF45;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: auto;
+    min-width: 150px;
+}
+
+button:hover {
+    background-color: #5D9738;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-box {
+        width: 90%;
+        padding: 40px;
+        margin-left: 0;
+    }
+
+    .logo-section img {
+        width: 150px;
+    }
+
+    .fallback-logo {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    input, select {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
