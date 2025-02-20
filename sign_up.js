@@ -21,3 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+document.getElementById("register-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents form from actually submitting to a backend
+
+    // Optionally, you can add form validation or store user data in localStorage here
+
+    window.location.href = "sign_in.html"; // Redirect to sign-in page after form submission
+});
