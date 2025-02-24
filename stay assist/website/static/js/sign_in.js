@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Simulated login logic (Replace with actual backend authentication)
         if (email === "user@example.com" && password === "password123") {
             alert("Login successful!");
-            window.location.href = "dashboard.html"; // Redirect to dashboard
+            window.location.href = "features.html"; // Redirect to dashboard
         } else {
             alert("Invalid email or password.");
         }

@@ -24,9 +24,13 @@
             <a href="#">Feedback</a>
           </div>
           <div class="auth-buttons">
-            <button class="btn btn-outline">Sign In</button>
-            <button class="btn btn-filled">Get Started</button>
-          </div>
+            <a href="{{ url_for('auth.sign_in') }}" class="btn btn-outline">Sign In</a>
+            <a href="{{ url_for('auth.sign_up') }}" class="btn btn-filled">Get Started</a>
+
+        </div>
+        
+        
+          
         </nav>
 
         <!-- Hero Content -->
@@ -235,13 +239,13 @@
                   /></a>
                   <a href="#" style="cursor: default"
                     ><img
-                      src="{{ url_for('static', filename='images/tele_icon.png') }}"
+                      src="{{ url_for('static', filename='images/fb_icon') }}"
                       alt="Facebook"
                       class="social-icon"
                   /></a>
                   <a href="#" style="cursor: default"
                     ><img
-                      src="{{ url_for('static', filename='images/tele_icon.png') }}"
+                      src="{{ url_for('static', filename='images/linkedin_icon') }}"
                       alt="LinkedIn"
                       class="social-icon"
                   /></a>
