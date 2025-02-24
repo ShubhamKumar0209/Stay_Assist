@@ -21,11 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// Handle form submission and redirection
 document.getElementById("register-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevents form from actually submitting to a backend
+    event.preventDefault(); // Prevents default form submission
 
-    // Optionally, you can add form validation or store user data in localStorage here
+    // Get the Flask-generated URL for sign-in
+    const signInUrl = document.getElementById("register-form").dataset.signinUrl;
 
-    window.location.href = "{{ url_for('sign_in') }}";
- // Redirect to sign-in page after form submission
+    // Redirect to the sign-in page
+    window.location.href = signInUrl;
 });

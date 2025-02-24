@@ -11,7 +11,7 @@
     <!-- Navbar -->
     <nav>
         <a href="#" class="logo">
-            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Stay Assist Logo" />
+            <img src="{{ url_for('static', filename='images/Logo.svg') }}" alt="Stay Assist Logo" />
             <span class="stay">Stay</span> <span class="assist">&nbsp;Assist</span>
         </a>
         <div class="nav-links">
@@ -39,7 +39,7 @@
         <!-- Registration Form -->
         <div class="form-box">
             <h2>One step away from Assistance</h2>
-            <form action="#" method="POST" id="register-form">
+            <form action="#" method="POST" id="register-form" data-signin-url="{{ url_for('auth.sign_in') }}">
                 <div class="name-group">
                     <input type="text" placeholder="First Name" required>
                     <input type="text" placeholder="Last Name" required>
