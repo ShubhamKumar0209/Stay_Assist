@@ -26,5 +26,6 @@ document.getElementById("register-form").addEventListener("submit", function(eve
 
     // Optionally, you can add form validation or store user data in localStorage here
 
-    window.location.href = "sign_in.html"; // Redirect to sign-in page after form submission
+    window.location.href = "{{ url_for('sign_in') }}";
+ // Redirect to sign-in page after form submission
 });

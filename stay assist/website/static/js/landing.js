@@ -35,3 +35,6 @@ function hideServiceDetails() {
   const detailsPanel = document.getElementById("serviceDetails");
   detailsPanel.classList.remove("active");
 }
+function redirectTo(url) {
+  window.location.href = url;
+}
