@@ -87,8 +87,7 @@
           <p class="supporting-text">
             We'll help you through the hardest part of your weekend cleaning.
           </p>
-
-          <button class="cta-button">Create an Account</button>
+          <a href="{{ url_for('auth.sign_up') }}" class="cta-button">Create an Account</a>
         </div>
       </section>
       <section class="features-section2">
@@ -140,8 +139,10 @@
               <p class="templates-description">
                 Unwanted roommates 🐜? And no, we don’t mean your friends! Get rid of pests with our reliable pest control service. Because your room should be yours - not a home for insects!
               </p>
-              <button class="templates-cta">Create an Account</button>
-            </div>
+              
+              <a href="{{ url_for('auth.sign_up') }}" class="templates-cta">Create an Account</a>
+
+              </div>
             <div class="templates-image">
               <img
                 src="{{ url_for('static', filename='images/pest-control-concept-illustratio.png') }}"
@@ -239,13 +240,13 @@
                   /></a>
                   <a href="#" style="cursor: default"
                     ><img
-                      src="{{ url_for('static', filename='images/fb_icon') }}"
+                      src="{{ url_for('static', filename='images/fb_icon.png') }}"
                       alt="Facebook"
                       class="social-icon"
                   /></a>
                   <a href="#" style="cursor: default"
                     ><img
-                      src="{{ url_for('static', filename='images/linkedin_icon') }}"
+                      src="{{ url_for('static', filename='images/linkedin_icon.png') }}"
                       alt="LinkedIn"
                       class="social-icon"
                   /></a>
