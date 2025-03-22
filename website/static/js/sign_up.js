@@ -20,15 +20,15 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
-});
 
-// Handle form submission and redirection
-document.getElementById("register-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevents default form submission
-
-    // Get the Flask-generated URL for sign-in
-    const signInUrl = document.getElementById("register-form").dataset.signinUrl;
-
-    // Redirect to the sign-in page
-    window.location.href = signInUrl;
+    // Handle form submission
+    document.getElementById("register-form").addEventListener("submit", function(event) {
+        // Perform any client-side validation here
+        const password = document.getElementById("password-group").value;
+        if (password.length < 8) {
+            alert("Password must be at least 8 characters long.");
+            event.preventDefault(); // Prevent form submission if validation fails
+        }
+        // If validation passes, the form will submit normally
+    });
 });

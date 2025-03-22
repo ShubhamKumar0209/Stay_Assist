@@ -39,23 +39,22 @@
         <!-- Registration Form -->
         <div class="form-box">
             <h2>One step away from Assistance</h2>
-            <form action="#" method="POST" id="register-form" data-signin-url="{{ url_for('auth.sign_in') }}">
+            <form action="{{ url_for('auth.sign_up') }}" method="POST" id="register-form">
                 <div class="name-group">
-                    <input type="text" placeholder="First Name" required>
-                    <input type="text" placeholder="Last Name" required>
+                    <input type="text" name="first_name" placeholder="First Name" required>
+                    <input type="text" name="last_name" placeholder="Last Name" required>
                 </div>
 
-                <input type="email" placeholder="Email Address" required>
-                <input type="text" placeholder="Phone Number" required>
-
-                <!-- Username Field -->
-                <div class="username-group">
-                    <input type="text" id="username" placeholder="Username" required>
-                    <span id="username-status"></span>
+                <input type="email" name="email" placeholder="Email Address" required>
+               
+                <div class="password-group">
+                    <input type="password" name="password" id="password-group" placeholder="Password" required>
+                    <span id="password-status"></span>
                 </div>
+                <input type="text" name="phone_number" placeholder="Phone Number" required>
 
                 <div class="gender-group">
-                    <select id="gender" required>
+                    <select name="hostel" id="gender" required>
                         <option value="" disabled selected>Select Hostel</option>
                         <option value="Men">Mens</option>
                         <option value="Ladies">Ladies</option>
@@ -64,10 +63,10 @@
 
                 <!-- Hostel and Room Selection -->
                 <div class="hostel-group">
-                    <select id="hostel" required>
+                    <select name="block" id="hostel" required>
                         <option value="" disabled selected>Select Block</option>
                     </select>
-                    <input type="text" placeholder="Room Number" required>
+                    <input type="text" name="room_number" placeholder="Room Number" required>
                 </div>
                 <button type="submit">Register</button>
             </form>
