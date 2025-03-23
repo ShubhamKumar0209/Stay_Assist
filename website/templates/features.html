@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello</h1>
+    <div class="container">
+        <div class="services">
+            <div class="1stRow">
+                <img src="{{ url_for('static', filename='images/vaccumCleaner.jpg') }}" alt="Cleaning" />
+                <img src="{{ url_for('static', filename='images/pest.jpg') }}" alt="Pest Control" />
+            </div>
+            <div class="2ndRow">
+                <img src="{{ url_for('static', filename='images/ac.jpg.jpg') }}" alt="Ac servicing" />
+                <img src="{{ url_for('static', filename='images/Furniture.jpg') }}" alt="Repair" />
+            </div>
+            
+        </div>
+        <div class="text">
+            <p>Premium Room services at your door step</p>
+        </div>
+    </div>
 </body>
 </html>

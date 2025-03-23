@@ -63,3 +63,6 @@ def logout():
 @auth.route('/features')
 def features():
     return render_template('features.html')
+@auth.route('/userInput')
+def userInput():
+    return render_template('userInput.html')
