@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: url("../images/bg-2.png") center/cover fixed, 
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar .logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    display: flex;
+    padding: 5px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4a261;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    width: 85vw;
+    height: 75vh;
+    margin-top: 110px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+}
+
+/* Service Section */
+.services {
+    width: 60%;
+    border-radius: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(15px);
+    justify-content: space-around;
+}
+
+.service-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.service-card {
+    flex: 1;
+    max-width: calc(90% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card img {
+    border-radius: 5px;
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Text Section */
+.text {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: aliceblue;
+    padding: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.service-form-container {
+    position: fixed;
+    top: 50%;
+    right: 5%;  /* Moves it towards the right */
+    transform: translateY(-50%); /* Keeps it centered vertically */
+    width: 40%; /* Adjust width to fit well on the right side */
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    color: white;
+    display: none; /* Initially hidden */
+    animation: fadeIn 0.3s ease-in-out;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+.service-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.service-form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.service-form label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Input & Textarea */
+.service-form textarea,
+.service-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.service-form textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+/* Styling for datetime-local */
+.service-form input[type="datetime-local"] {
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.service-form input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Makes the calendar icon white */
+    cursor: pointer;
+}
+
+/* Buttons */
+.service-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+#submit-btn {
+    background: #23710b;
+    color: white;
+}
+
+#submit-btn:hover {
+    background: #438740;
+}
+
+#close-btn {
+    background: #272525;
+    color: white;
+}
+
+#close-btn:hover {
+    background: #696565;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .services {
+        width: 90%;
+    }
+
+    .service-card {
+        width: 48%;
+        height: 180px;
+    }
+
+    .text {
+        width: 90%;
+        font-size: 1.8rem;
+        margin-top: 20px;
+    }
+
+    /* Adjust form for mobile */
+    .service-form-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .service-card {
+        width: 100%;
+        height: 150px;
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+
+    .service-form-container {
+        width: 90%;
+    }
+}

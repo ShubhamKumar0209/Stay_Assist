@@ -3,23 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Features</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/features.css') }}">
 </head>
 <body>
+    <script src="{{ url_for('static', filename='js/features.js') }}"></script>
+    <div class="navbar">
+        <nav class="navbar">
+            <div class="logo">
+              <img src="{{ url_for('static', filename='images/Logo.svg') }}" alt="Stay Assist Logo" />
+              Stay Assist
+            </div>
+            <div class="nav-links">
+              <a href="#">Home</a>
+              <a href="#">About Us</a>
+              <a href="#">Feedback</a>
+            </div>
+          </nav>
+    </div>
     <div class="container">
         <div class="services">
-            <div class="1stRow">
-                <img src="{{ url_for('static', filename='images/vaccumCleaner.jpg') }}" alt="Cleaning" />
-                <img src="{{ url_for('static', filename='images/pest.jpg') }}" alt="Pest Control" />
+            <div class="service-row">
+                <div class="service-card">
+                    <img src="{{ url_for('static', filename='images/vaccumCleaner.jpg') }}" alt="Cleaning" />
+                </div>
+                <div class="service-card">
+                    <img src="{{ url_for('static', filename='images/pest.jpg') }}" alt="Pest Control" />
+                </div>
             </div>
-            <div class="2ndRow">
-                <img src="{{ url_for('static', filename='images/ac.jpg.jpg') }}" alt="Ac servicing" />
-                <img src="{{ url_for('static', filename='images/Furniture.jpg') }}" alt="Repair" />
+            <div class="service-row">
+                <div class="service-card">
+                    <img src="{{ url_for('static', filename='images/ac.jpg') }}" alt="Ac servicing" />
+                </div>
+                <div class="service-card">
+                    <img src="{{ url_for('static', filename='images/Furniture.jpg') }}" alt="Repair" />
+                </div>
             </div>
-            
         </div>
         <div class="text">
-            <p>Premium Room services at your door step</p>
+            <p>Premium Room Services at Your Doorstep</p>
         </div>
     </div>
 </body>
